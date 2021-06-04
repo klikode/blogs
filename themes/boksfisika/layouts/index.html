@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+
+        {{ partial "nav.html" . }}
+        {{ partial "header.html" . }}
+
+        {{ partial "post-grid.html" . }}
+        <div class="bg-light border shadow-sm">
+            <div class="container">
+                <div class="row py-3 ">
+                    <div class="col-12 col-md-3 pt-4 pr-5 d-none d-md-block">
+                        <img src="/img/tentang-boks-fisika.svg" alt="" class="img-fluid pt-3" >
+                    </div>
+                    <div class="col-12 col-md-9 text-white text-justify">
+                        <h2 class="text-left text-dark pt-4 pb-2">Tentang klikode</h2>
+                        <p class="font-weight-light text-dark" style="font-size: 1.1rem;
+                        font-weight: 300; ">
+                        Perkenalkan nama saya Ashari Midana, saat ini saya sedang kuliah di salah satu universitas di sulawesi, jurusan fisika MIPA. Pemrograman merupakan
+                        salah satu hobi saya, blog ini kedepannya akan menjadi catatan belajar saya sekaligus akan membahas pemrograman, teknologi seputar sains dan istrumentasi. <br> selamat belajar dan semangat... </p>
+
+
+                        <a href="{{.Site.BaseURL}}/about" class="btn btn-outline-primary">Selengkapnya &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ partial "post-cat.html" . }}
+
+        <div class="d-none d-sm-block">
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "js-init.html" . }}
+       
+        
+    </body>
+</html>

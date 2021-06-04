@@ -1,0 +1,27 @@
+title = "klikode >>"
+# Agar front-matter pakai format YAML
+MetaDataFormat = "yaml"
+
+# untuk apply temanya
+themesDir = "themes"
+theme = "boksfisika"
+
+# Shortname disqus, silahkan sesuaikan
+DisqusShortname = "Boks Fisika"
+
+# Untuk Google Analytic, silahkan sesuikan
+googleAnalytics = "G-BM7MNLDFB6" 
+
+# Untuk deskripsi tag meta di homepage
+description = "Blog Seputar Fisika"
+baseURL = "https://boksfisika.web.id/"
+
+paginate = 2
+
+# Biodata Author
+[author]
+    [author.ari]
+        name = "Ashari Midana"
+        homepage = "klikode.id@gmail.com"
+        image = "/img/profil.jpeg"
+    

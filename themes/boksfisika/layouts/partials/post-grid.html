@@ -1,0 +1,43 @@
+<article class="card-post">
+    <h2 class="my-4 text-center">Artikel Terbaru</h2>
+    <h5 class="font-weight-light  text-center mb-4" style="
+    font-weight: 360; " >Apa yang baru di Boks Fisika?</h5>
+    <div class="container">
+        <div class="row">
+
+            {{ $paginator := .Paginate ( .Site.RegularPages) 6 }}
+            {{ range $paginator.Pages }}
+                    <div class="col-md-4 col-12 mb-4 d-md-flex">
+                        <div class="card p-2 shadow-sm">
+                            <a href="{{ .RelPermalink }}">
+                            <img class='card-img-top rounded' 
+                                src='{{ if eq .Params.Image "" }}
+                                        /img/default.svg
+                                     {{else}}
+                                        {{ .Params.Image}}
+                                     {{end}}'
+                                alt='{{ .Title }}'>
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a class="text-dark" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                </h5>
+                                {{ if isset .Params "description" }}
+                                    <small class="text-muted">{{ .Description }}</small>
+                                {{end}}
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                {{ end }}
+            
+            <div class="container">
+                {{ partial "pagination.html" .}}
+            </div>
+            
+        </div>
+    </div>
+</article>
+
+
