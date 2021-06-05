@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/klikode/klikode.github.io.git
+	branch = main
